@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="703dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <!-- Icono de la Categoría -->
+        <ImageView
+            android:id="@+id/iconCategoria"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:contentDescription="@string/categoria_icon"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_toy" />
+
+        <!-- Información de la Categoría -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:orientation="vertical">
+
+            <!-- Nombre de la Categoría -->
+            <TextView
+                android:id="@+id/textNombreCategoria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Juguetes"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Descripción de la Categoría -->
+            <TextView
+                android:id="@+id/textDescripcionCategoria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:text="Breve descripción de la categoría."
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+

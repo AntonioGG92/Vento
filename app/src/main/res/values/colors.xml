@@ -1,0 +1,10 @@
+<resources>
+    <color name="colorPrimary">#FF5722</color>
+    <color name="colorSecondary">#FFC107</color>
+    <color name="backgroundColor">#FFF8E1</color>
+    <color name="textColor">#212121</color>
+    <color name="buttonTextColor">#FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="bottom_nav_item_color">#000000</color>
+
+</resources>

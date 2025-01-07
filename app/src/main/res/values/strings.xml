@@ -1,0 +1,49 @@
+<resources>
+    <!-- Nombre de la App -->
+    <string name="app_name">Vento</string>
+
+    <!-- Strings para Categorías -->
+    <string name="categorias_titulo">Categorías</string>
+    <string name="categoria_icon">Icono de categoría</string>
+    <string name="categoria_juguetes">Juguetes Educativos</string>
+    <string name="categoria_figuras_accion">Figuras de Acción</string>
+    <string name="categoria_juegos_mesa">Juegos de Mesa</string>
+
+    <!-- Descripciones de Categorías -->
+    <string name="descripcion_juguetes">Aprender mientras juegan.</string>
+    <string name="descripcion_figuras_accion">Los héroes favoritos.</string>
+    <string name="descripcion_juegos_mesa">Diversión para toda la familia.</string>
+
+    <!-- Strings para Productos -->
+    <string name="producto_nombre">Nombre del Producto</string>
+    <string name="producto_precio">Precio</string>
+    <string name="producto_descripcion">Descripción</string>
+    <string name="producto_puzzle">Puzzle educativo</string>
+    <string name="producto_robot">Robot interactivo</string>
+    <string name="producto_monopoly">Monopoly Clásico</string>
+    <string name="producto_avengers">Figura de los Avengers</string>
+    <string name="producto_lego">Set de LEGO</string>
+
+    <!-- Botones -->
+    <string name="btn_comprar">Comprar</string>
+    <string name="btn_ver_detalles">Ver Detalles</string>
+    <string name="btn_volver">Volver</string>
+
+    <!-- Mensajes -->
+    <string name="mensaje_no_productos">No hay productos disponibles.</string>
+    <string name="mensaje_cargando">Cargando...</string>
+    <string name="mensaje_error_carga">Error al cargar los datos.</string>
+
+    <!-- Etiquetas Generales -->
+    <string name="precio">Precio:</string>
+    <string name="descripcion">Descripción:</string>
+
+    <!-- Etiquetas Registro -->
+    <string name="titulo_registro">Registro de Usuario</string>
+    <string name="hint_nombre">Nombre</string>
+    <string name="hint_correo">Correo Electrónico</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="hint_confirmar_password">Confirmar Contraseña</string>
+    <string name="btn_registrar">Registrarse</string>
+
+</resources>
