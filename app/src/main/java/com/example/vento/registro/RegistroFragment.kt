@@ -43,7 +43,7 @@ class RegistroFragment : Fragment() {
                 // Registro exitoso
                 Toast.makeText(requireContext(), "Usuario registrado correctamente", Toast.LENGTH_SHORT).show()
 
-                // Aquí podrías agregar la lógica para guardar el usuario en una base de datos
+                // Aquí lógica para guardar el usuario en una base de datos
             }
         }
     }

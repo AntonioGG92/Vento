@@ -29,7 +29,7 @@ class ProductosFragment : Fragment() {
     }
 
     private fun getDummyProductos(): List<String> {
-        // Datos ficticios para probar
+        // Datos para probar
         return listOf("Producto 1", "Producto 2", "Producto 3", "Producto 4")
     }
 }
