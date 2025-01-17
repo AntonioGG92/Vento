@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.vento.R
 
 class RegistroFragment : Fragment() {
@@ -27,6 +28,7 @@ class RegistroFragment : Fragment() {
         val etPassword = view.findViewById<EditText>(R.id.etPassword)
         val etConfirmPassword = view.findViewById<EditText>(R.id.etConfirmPassword)
         val btnRegistrar = view.findViewById<Button>(R.id.btnRegistrar)
+        val btnIrALogin = view.findViewById<Button>(R.id.btnIrALogin) // Cambiar a btnIrALogin
 
         btnRegistrar.setOnClickListener {
             val nombre = etNombre.text.toString()
@@ -45,6 +47,11 @@ class RegistroFragment : Fragment() {
 
                 // Aquí lógica para guardar el usuario en una base de datos
             }
+        }
+
+        btnIrALogin.setOnClickListener {
+            // Navegar al LoginFragment
+            findNavController().navigate(R.id.action_registroFragment_to_loginFragment)
         }
     }
 }

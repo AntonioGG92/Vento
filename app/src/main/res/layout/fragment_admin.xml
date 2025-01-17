@@ -1,0 +1,67 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- EditText para Nombre de la Categoría -->
+    <EditText
+        android:id="@+id/etNombreCategoria"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Nombre de la categoría"
+        android:inputType="text" />
+
+    <!-- EditText para Descripción de la Categoría -->
+    <EditText
+        android:id="@+id/etDescripcionCategoria"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Descripción de la categoría"
+        android:inputType="textMultiLine"
+        android:lines="3"
+        android:gravity="top" />
+
+    <!-- Botón para Agregar Categoría -->
+    <Button
+        android:id="@+id/btnAgregarCategoria"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Agregar categoría" />
+
+    <!-- Botón para Eliminar Categoría -->
+    <Button
+        android:id="@+id/btnEliminarCategoria"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Eliminar categoría"
+        android:layout_marginTop="8dp" />
+
+    <!-- Botón para Volver -->
+    <Button
+        android:id="@+id/btnVolver"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Volver"
+        android:layout_marginTop="16dp" />
+
+    <!-- RecyclerView para Mostrar Categorías -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerCategorias"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnGestionProductos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gestionar Productos" />
+
+    <Button
+        android:id="@+id/btnGestionCategorias"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gestionar Categorías" />
+
+</LinearLayout>

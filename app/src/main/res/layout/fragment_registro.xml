@@ -76,6 +76,16 @@
             android:text="@string/btn_registrar"
             android:backgroundTint="@color/colorPrimary"
             android:textColor="@color/white"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Botón para redirigir al Login -->
+        <Button
+            android:id="@+id/btnIrALogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_ir_a_login"
+            android:backgroundTint="@color/colorSecondary"
+            android:textColor="@color/white"
             android:layout_marginTop="16dp" />
     </LinearLayout>
 </ScrollView>

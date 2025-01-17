@@ -1,5 +1,5 @@
-<resources>
-    <!-- Nombre de la App -->
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="DuplicateDefinition">
+    <!-- Strings existentes -->
     <string name="app_name">Vento</string>
 
     <!-- Strings para Categorías -->
@@ -28,11 +28,18 @@
     <string name="btn_comprar">Comprar</string>
     <string name="btn_ver_detalles">Ver Detalles</string>
     <string name="btn_volver">Volver</string>
+    <string name="btn_login">Iniciar Sesión</string>
+    <string name="btn_agregar_producto">Agregar Producto</string>
+    <string name="btn_eliminar_producto">Eliminar Producto</string>
 
     <!-- Mensajes -->
     <string name="mensaje_no_productos">No hay productos disponibles.</string>
     <string name="mensaje_cargando">Cargando...</string>
     <string name="mensaje_error_carga">Error al cargar los datos.</string>
+    <string name="mensaje_producto_agregado">Producto agregado con éxito.</string>
+    <string name="mensaje_producto_eliminado">Producto eliminado con éxito.</string>
+    <string name="mensaje_falta_datos">Por favor completa todos los campos.</string>
+    <string name="mensaje_producto_no_encontrado">Producto no encontrado.</string>
 
     <!-- Etiquetas Generales -->
     <string name="precio">Precio:</string>
@@ -46,4 +53,34 @@
     <string name="hint_confirmar_password">Confirmar Contraseña</string>
     <string name="btn_registrar">Registrarse</string>
 
+    <!-- Etiquetas Login -->
+    <string name="titulo_login">Inicio de Sesión</string>
+    <string name="hint_email">Correo</string>
+    <string name="hint_password_login">Contraseña</string>
+    <string name="mensaje_login_error">Credenciales inválidas</string>
+    <string name="mensaje_login_cargando">Verificando credenciales...</string>
+    <string name="btn_ir_a_login">Ya tengo una cuenta</string>
+
+    <!-- Navegación -->
+    <string name="admin_panel">Panel de Administración</string>
+    <string name="usuario_panel">Panel de Usuario</string>
+    <string name="menu_categorias">Categorías</string>
+    <string name="menu_productos">Productos</string>
+    <string name="menu_perfil">Perfil</string>
+
+    <!-- Administración -->
+    <string name="titulo_gestion_productos">Gestionar Productos</string>
+    <string name="titulo_gestion_categorias">Gestionar Categorías</string>
+    <string name="btn_agregar_categoria">Agregar Categoría</string>
+    <string name="btn_editar_producto">Editar Producto</string>
+    <string name="btn_eliminar_categoria">Eliminar Categoría</string>
+    <string name="mensaje_categoria_agregada">Categoría agregada con éxito.</string>
+    <string name="mensaje_categoria_eliminada">Categoría eliminada con éxito.</string>
+
+    <!-- Nuevas cadenas -->
+    <string name="hint_nombre_producto">Introduce el nombre del producto</string>
+    <string name="hint_precio_producto">Introduce el precio del producto</string>
+    <string name="hint_descripcion_producto">Introduce la descripción del producto</string>
 </resources>
+
+
