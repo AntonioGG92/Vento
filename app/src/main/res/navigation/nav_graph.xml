@@ -27,6 +27,9 @@
         <action
             android:id="@+id/action_loginFragment_to_registroFragment"
             app:destination="@id/registroFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_usuarioPanelFragment"
+            app:destination="@id/usuarioPanelFragment" />
     </fragment>
 
     <!-- Admin Fragment -->
@@ -41,6 +44,14 @@
         <action
             android:id="@+id/action_adminFragment_to_gestionCategoriasFragment"
             app:destination="@id/gestionarCategoriasFragment" />
+    </fragment>
+
+    <!-- Usuario Panel Fragment -->
+    <fragment
+        android:id="@+id/usuarioPanelFragment"
+        android:name="com.example.vento.usuario.UsuarioPanelFragment"
+        android:label="Usuario Panel"
+        tools:layout="@layout/fragment_usuario_panel">
     </fragment>
 
     <!-- Fragmento para gestionar categorías -->

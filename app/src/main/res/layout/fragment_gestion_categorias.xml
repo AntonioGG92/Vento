@@ -1,53 +1,72 @@
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:padding="16dp">
 
-    <!-- Campo para el nombre de la categoría -->
-    <EditText
-        android:id="@+id/etNombreCategoria"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nombre de la categoría"
-        android:layout_marginBottom="8dp" />
+        android:orientation="vertical">
 
-    <!-- Campo para la descripción de la categoría -->
-    <EditText
-        android:id="@+id/etDescripcionCategoria"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Descripción de la categoría"
-        android:layout_marginBottom="16dp" />
+        <!-- Campo para el nombre de la categoría -->
+        <EditText
+            android:id="@+id/etNombreCategoria"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="@string/hint_nombre_categoria"
+            android:inputType="text"
+            android:padding="12dp"
+            android:minHeight="48dp"
+            android:layout_marginBottom="8dp" />
 
-    <!-- Botón para agregar categoría -->
-    <Button
-        android:id="@+id/btnAgregarCategoria"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Agregar Categoría"
-        android:layout_marginBottom="16dp" />
+        <!-- Campo para la descripción de la categoría -->
+        <EditText
+            android:id="@+id/etDescripcionCategoria"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="@string/hint_descripcion_categoria"
+            android:inputType="textMultiLine"
+            android:padding="12dp"
+            android:minHeight="48dp"
+            android:gravity="top"
+            android:layout_marginBottom="16dp" />
 
-    <!-- Botón para eliminar categoría -->
-    <Button
-        android:id="@+id/btnEliminarCategoria"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Eliminar Categoría"
-        android:layout_marginBottom="16dp" />
+        <!-- Botón para agregar categoría -->
+        <Button
+            android:id="@+id/btnAgregarCategoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_agregar_categoria"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="16dp" />
 
-    <!-- Botón para volver -->
-    <Button
-        android:id="@+id/btnVolver"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Volver"
-        android:layout_marginBottom="16dp" />
+        <!-- Botón para eliminar categoría -->
+        <Button
+            android:id="@+id/btnEliminarCategoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_eliminar_categoria"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="16dp" />
 
-    <!-- RecyclerView para mostrar categorías -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerCategorias"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-</LinearLayout>
+        <!-- Botón para volver -->
+        <Button
+            android:id="@+id/btnVolver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_volver"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="16dp" />
+
+        <!-- RecyclerView para mostrar categorías -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerCategorias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</ScrollView>

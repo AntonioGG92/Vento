@@ -1,6 +1,5 @@
 package com.example.vento.login
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,7 +10,6 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
-import com.example.vento.MainActivity
 import com.example.vento.R
 import com.example.vento.data.DatabaseProvider
 import kotlinx.coroutines.launch
@@ -40,6 +38,11 @@ class LoginFragment : Fragment() {
             val correo = etCorreo.text.toString()
             val password = etPassword.text.toString()
 
+            if (correo.isEmpty() || password.isEmpty()) {
+                Toast.makeText(requireContext(), "Por favor, completa todos los campos", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
             // Iniciar una coroutine para llamar a la función suspendida
             viewLifecycleOwner.lifecycleScope.launch {
                 val usuario = usuarioDao.autenticarUsuario(correo, password)
@@ -49,8 +52,8 @@ class LoginFragment : Fragment() {
                         // Navegar al panel de administrador
                         findNavController().navigate(R.id.action_loginFragment_to_adminFragment)
                     } else {
-                        // Iniciar MainActivity para usuarios normales
-                        navigateToMainActivity()
+                        // Navegar a la pantalla de categorías (Usuario)
+                        findNavController().navigate(R.id.action_loginFragment_to_usuarioPanelFragment)
                     }
                 } else {
                     Toast.makeText(requireContext(), "Credenciales inválidas", Toast.LENGTH_SHORT).show()
@@ -62,11 +65,5 @@ class LoginFragment : Fragment() {
         btnIrARegistro.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_registroFragment)
         }
-    }
-
-    private fun navigateToMainActivity() {
-        val intent = Intent(requireContext(), MainActivity::class.java)
-        startActivity(intent)
-        requireActivity().finish()
     }
 }

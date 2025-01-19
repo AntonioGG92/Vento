@@ -31,6 +31,8 @@
     <string name="btn_login">Iniciar Sesión</string>
     <string name="btn_agregar_producto">Agregar Producto</string>
     <string name="btn_eliminar_producto">Eliminar Producto</string>
+    <string name="btn_agregar_categoria">Agregar Categoría</string>
+    <string name="btn_eliminar_categoria">Eliminar Categoría</string>
 
     <!-- Mensajes -->
     <string name="mensaje_no_productos">No hay productos disponibles.</string>
@@ -71,9 +73,6 @@
     <!-- Administración -->
     <string name="titulo_gestion_productos">Gestionar Productos</string>
     <string name="titulo_gestion_categorias">Gestionar Categorías</string>
-    <string name="btn_agregar_categoria">Agregar Categoría</string>
-    <string name="btn_editar_producto">Editar Producto</string>
-    <string name="btn_eliminar_categoria">Eliminar Categoría</string>
     <string name="mensaje_categoria_agregada">Categoría agregada con éxito.</string>
     <string name="mensaje_categoria_eliminada">Categoría eliminada con éxito.</string>
 
@@ -81,6 +80,14 @@
     <string name="hint_nombre_producto">Introduce el nombre del producto</string>
     <string name="hint_precio_producto">Introduce el precio del producto</string>
     <string name="hint_descripcion_producto">Introduce la descripción del producto</string>
-</resources>
+    <string name="hint_nombre_categoria">Nombre de la categoría</string>
+    <string name="hint_descripcion_categoria">Descripción de la categoría</string>
+    <string name="categoria_default_name">Nombre de la categoría</string>
+    <string name="categoria_default_description">Breve descripción de la categoría.</string>
+    <string name="error_cargar_categorias">Error al cargar categorías</string>
+    <string name="mensaje_no_categorias">No hay categorías disponibles</string>
+    <string name="btn_gestion_productos">Gestionar Productos</string>
+    <string name="btn_gestion_categorias">Gestionar Categorías</string>
 
+</resources>
 

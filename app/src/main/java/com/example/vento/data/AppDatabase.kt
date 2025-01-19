@@ -34,7 +34,7 @@ abstract class AppDatabase : RoomDatabase() {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     AppDatabase::class.java,
-                    "app_database"
+                    "vento_database"
                 )
                     .addCallback(AppDatabaseCallback(context)) // Callback para datos iniciales
                     .build()
