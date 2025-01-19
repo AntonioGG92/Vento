@@ -88,6 +88,8 @@
     <string name="mensaje_no_categorias">No hay categorías disponibles</string>
     <string name="btn_gestion_productos">Gestionar Productos</string>
     <string name="btn_gestion_categorias">Gestionar Categorías</string>
+    <string name="logo_desc">Logo de la aplicación Vento</string>
+
 
 </resources>
 

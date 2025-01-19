@@ -9,7 +9,18 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Logo de la Aplicación -->
+        <ImageView
+            android:id="@+id/logoVento"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:src="@drawable/logo"
+            android:contentDescription="@string/logo_desc"
+            android:layout_marginBottom="32dp"
+            android:layout_gravity="center" />
 
         <!-- Título -->
         <TextView
@@ -27,7 +38,6 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:hint="@string/hint_nombre"
-            android:autofillHints="name"
             android:inputType="textPersonName"
             android:padding="12dp"
             android:background="@drawable/edittext_background"
@@ -39,7 +49,6 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:hint="@string/hint_correo"
-            android:autofillHints="emailAddress"
             android:inputType="textEmailAddress"
             android:padding="12dp"
             android:background="@drawable/edittext_background"
@@ -51,7 +60,6 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:hint="@string/hint_password"
-            android:autofillHints="password"
             android:inputType="textPassword"
             android:padding="12dp"
             android:background="@drawable/edittext_background"
