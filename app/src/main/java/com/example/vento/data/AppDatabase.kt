@@ -52,7 +52,6 @@ abstract class AppDatabase : RoomDatabase() {
     ) : Callback() {
         override fun onCreate(db: SupportSQLiteDatabase) {
             super.onCreate(db)
-            // Insertar datos iniciales (ejemplo: usuario administrador)
             CoroutineScope(Dispatchers.IO).launch {
                 val dao = getInstance(context).usuarioDAO()
                 dao.insertarUsuario(

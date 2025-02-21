@@ -8,5 +8,6 @@
     <color name="bottom_nav_item_color">#000000</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorPrimaryDark">#FF6200EE</color>
+    <color name="gray">#808080</color>
 
 </resources>

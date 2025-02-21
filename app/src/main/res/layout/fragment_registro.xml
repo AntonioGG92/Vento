@@ -12,7 +12,17 @@
         android:orientation="vertical"
         android:gravity="center">
 
-        <!-- Logo de la Aplicación -->
+        <!-- Eslogan -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="La magia de los juguetes en un solo lugar"
+            android:textSize="20sp"
+            android:textColor="#006F6F"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Logo -->
         <ImageView
             android:id="@+id/logoVento"
             android:layout_width="220dp"
@@ -32,7 +42,7 @@
             android:layout_gravity="center"
             android:layout_marginBottom="24dp" />
 
-        <!-- Campo Nombre -->
+        <!-- Nombre -->
         <EditText
             android:id="@+id/etNombre"
             android:layout_width="match_parent"
@@ -43,7 +53,7 @@
             android:background="@drawable/edittext_background"
             android:layout_marginBottom="16dp" />
 
-        <!-- Campo Correo -->
+        <!-- Correo -->
         <EditText
             android:id="@+id/etCorreo"
             android:layout_width="match_parent"
@@ -54,7 +64,7 @@
             android:background="@drawable/edittext_background"
             android:layout_marginBottom="16dp" />
 
-        <!-- Campo Contraseña -->
+        <!-- Contraseña -->
         <EditText
             android:id="@+id/etPassword"
             android:layout_width="match_parent"
@@ -65,7 +75,7 @@
             android:background="@drawable/edittext_background"
             android:layout_marginBottom="16dp" />
 
-        <!-- Campo Confirmar Contraseña -->
+        <!-- Confirmar Contraseña -->
         <EditText
             android:id="@+id/etConfirmPassword"
             android:layout_width="match_parent"

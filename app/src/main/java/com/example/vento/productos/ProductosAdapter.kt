@@ -12,7 +12,6 @@ class ProductosAdapter(
     private val productos: List<Producto>
 ) : RecyclerView.Adapter<ProductosAdapter.ProductoViewHolder>() {
 
-    // Clase ViewHolder que contiene las referencias a las vistas
     inner class ProductoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tvNombreProducto: TextView = itemView.findViewById(R.id.tvNombreProducto)
         val tvDescripcionProducto: TextView = itemView.findViewById(R.id.tvDescripcionProducto)
@@ -34,3 +33,4 @@ class ProductosAdapter(
 
     override fun getItemCount(): Int = productos.size
 }
+

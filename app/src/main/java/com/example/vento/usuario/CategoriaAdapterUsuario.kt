@@ -21,6 +21,7 @@ class CategoriaAdapterUsuario(
             itemView.setOnClickListener {
                 val position = adapterPosition
                 if (position != RecyclerView.NO_POSITION) {
+                    // Llamar al callback con la categoría seleccionada
                     onCategoriaClick(categorias[position])
                 }
             }
@@ -28,7 +29,6 @@ class CategoriaAdapterUsuario(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoriaViewHolder {
-        // Inflate el layout del ítem del RecyclerView
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_categoria_usuario, parent, false)
         return CategoriaViewHolder(view)
@@ -36,9 +36,10 @@ class CategoriaAdapterUsuario(
 
     override fun onBindViewHolder(holder: CategoriaViewHolder, position: Int) {
         val categoria = categorias[position]
-        holder.nombre.text = categoria.nombre // Asignar el nombre de la categoría
-        holder.descripcion.text = categoria.descripcion // Asignar la descripción de la categoría
+        holder.nombre.text = categoria.nombre
+        holder.descripcion.text = categoria.descripcion
     }
 
-    override fun getItemCount(): Int = categorias.size // Devuelve el número total de categorías
+    override fun getItemCount(): Int = categorias.size
 }
+
