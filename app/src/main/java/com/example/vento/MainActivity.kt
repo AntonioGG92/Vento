@@ -1,9 +1,8 @@
 package com.example.vento
 
-
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.vento.databinding.ActivityMainBinding
 
@@ -18,13 +17,21 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Configurar NavController
-        val navController = findNavController(R.id.navHostFragment)
+        // Establecer la Toolbar como ActionBar
+        setSupportActionBar(binding.toolbar)
+
+        // Obtener el NavHostFragment de forma explícita y su NavController
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.navHostFragment) as? NavHostFragment
+            ?: throw IllegalStateException("NavHostFragment no encontrado en el layout")
+        val navController = navHostFragment.navController
+
+        // Configurar la ActionBar con el NavController
         setupActionBarWithNavController(navController)
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.navHostFragment)
-        return navController.navigateUp() || super.onSupportNavigateUp()
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.navHostFragment) as? NavHostFragment
+            ?: throw IllegalStateException("NavHostFragment no encontrado en el layout")
+        return navHostFragment.navController.navigateUp() || super.onSupportNavigateUp()
     }
 }

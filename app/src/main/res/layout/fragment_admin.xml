@@ -1,75 +1,68 @@
-<LinearLayout
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@color/fondoTurquesa">
 
-    <!-- EditText para Nombre de la Categoría -->
-    <EditText
-        android:id="@+id/etNombreCategoria"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/hint_nombre_categoria"
-        android:inputType="text"
-        android:layout_marginBottom="8dp" />
+        android:orientation="vertical"
+        android:gravity="center">
 
-    <!-- EditText para Descripción de la Categoría -->
-    <EditText
-        android:id="@+id/etDescripcionCategoria"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/hint_descripcion_categoria"
-        android:inputType="textMultiLine"
-        android:gravity="top"
-        android:lines="3"
-        android:layout_marginBottom="16dp" />
+        <!-- Título -->
+        <TextView
+            android:id="@+id/tvTituloAdmin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Panel de Administración"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="20dp" />
 
-    <!-- Botón para Agregar Categoría -->
-    <Button
-        android:id="@+id/btnAgregarCategoria"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_agregar_categoria"
-        android:layout_marginBottom="8dp" />
+        <!-- Botón para gestionar productos -->
+        <Button
+            android:id="@+id/btnGestionProductos"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Gestionar Productos"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="16dp" />
 
-    <!-- Botón para Eliminar Categoría -->
-    <Button
-        android:id="@+id/btnEliminarCategoria"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_eliminar_categoria"
-        android:layout_marginBottom="16dp" />
+        <!-- Botón para gestionar categorías -->
+        <Button
+            android:id="@+id/btnGestionCategorias"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Gestionar Categorías"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="16dp" />
 
-    <!-- Botón para Volver -->
-    <Button
-        android:id="@+id/btnVolver"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_volver"
-        android:layout_marginBottom="16dp" />
+        <!-- Botón para volver -->
+        <Button
+            android:id="@+id/btnVolver"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Volver"
+            android:backgroundTint="@color/colorSecondary"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="20dp" />
 
-    <!-- RecyclerView para Mostrar Categorías -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerCategorias"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_marginBottom="16dp" />
+        <!-- Logo de la Aplicación -->
+        <ImageView
+            android:id="@+id/logoVento"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/logo"
+            android:contentDescription="@string/logo_desc"
+            android:layout_marginTop="24dp"
+            android:layout_gravity="center" />
 
-    <!-- Botón para Gestionar Productos -->
-    <Button
-        android:id="@+id/btnGestionProductos"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_gestion_productos"
-        android:layout_marginBottom="8dp" />
-
-    <!-- Botón para Gestionar Categorías -->
-    <Button
-        android:id="@+id/btnGestionCategorias"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_gestion_categorias" />
-
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>

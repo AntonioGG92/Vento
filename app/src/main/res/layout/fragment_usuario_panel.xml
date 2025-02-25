@@ -1,9 +1,11 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@color/fondoTurquesa"> <!-- Color de fondo turquesa -->
 
     <!-- Logo de la Aplicación -->
     <ImageView
@@ -12,8 +14,8 @@
         android:layout_height="220dp"
         android:src="@drawable/logo"
         android:contentDescription="@string/logo_desc"
-        android:layout_marginBottom="32dp"
-        android:layout_gravity="center" />
+        android:layout_gravity="center"
+        android:layout_marginBottom="32dp" />
 
     <!-- Título -->
     <TextView
@@ -39,21 +41,25 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerCategoriasUsuario"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginBottom="8dp" />
 
-    <!-- Contenedor para reemplazar fragmentos -->
-    <FrameLayout
-        android:id="@+id/container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
+    <!-- Texto para cuando no hay categorías -->
     <TextView
         android:id="@+id/textNoCategorias"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="No hay categorías disponibles"
         android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <!-- Contenedor para mostrar el fragment de productos de una categoría -->
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:visibility="gone" />
 
 </LinearLayout>

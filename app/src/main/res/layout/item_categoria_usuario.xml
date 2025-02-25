@@ -6,7 +6,8 @@
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
     app:cardElevation="4dp"
-    app:cardCornerRadius="12dp">
+    app:cardCornerRadius="12dp"
+    app:cardBackgroundColor="@color/fondoTurquesa"> <!-- Color de fondo turquesa -->
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -47,4 +48,3 @@
         </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>
-

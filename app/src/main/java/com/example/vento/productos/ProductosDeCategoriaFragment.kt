@@ -18,8 +18,11 @@ class ProductosDeCategoriaFragment : Fragment() {
 
     private var categoriaId: Int = 0
 
-    fun setCategoriaId(id: Int) {
-        categoriaId = id
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        arguments?.let {
+            categoriaId = it.getInt("categoriaId", 0)
+        }
     }
 
     override fun onCreateView(

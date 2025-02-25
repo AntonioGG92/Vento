@@ -36,7 +36,7 @@ class GestionarCategoriasFragment : Fragment() {
         val etNombreCategoria = view.findViewById<EditText>(R.id.etNombreCategoria)
         val etDescripcionCategoria = view.findViewById<EditText>(R.id.etDescripcionCategoria)
         val btnAgregarCategoria = view.findViewById<Button>(R.id.btnAgregarCategoria)
-        val btnEliminarCategoria = view.findViewById<Button>(R.id.btnEliminarCategoria) // Botón eliminar
+        val btnEliminarCategoria = view.findViewById<Button>(R.id.btnEliminarCategoria)
         val btnVolver = view.findViewById<Button>(R.id.btnVolver) // Botón volver
         val recyclerCategorias = view.findViewById<RecyclerView>(R.id.recyclerCategorias)
 

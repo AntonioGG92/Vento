@@ -29,7 +29,6 @@ class LoginFragment : Fragment() {
         val etCorreo = view.findViewById<EditText>(R.id.etCorreo)
         val etPassword = view.findViewById<EditText>(R.id.etPassword)
         val btnLogin = view.findViewById<Button>(R.id.btnLogin)
-        val btnIrARegistro = view.findViewById<Button>(R.id.btnIrARegistro) // Botón para navegar al registro
 
         val db = DatabaseProvider.getDatabase(requireContext())
         val usuarioDao = db.usuarioDAO()
@@ -61,9 +60,6 @@ class LoginFragment : Fragment() {
             }
         }
 
-        // Lógica para el botón de navegación al RegistroFragment
-        btnIrARegistro.setOnClickListener {
-            findNavController().navigate(R.id.action_loginFragment_to_registroFragment)
-        }
+
     }
 }

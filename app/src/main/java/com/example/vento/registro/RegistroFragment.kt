@@ -13,7 +13,9 @@ import androidx.navigation.fragment.findNavController
 import com.example.vento.R
 import com.example.vento.data.AppDatabase
 import com.example.vento.data.entities.Usuario
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class RegistroFragment : Fragment() {
 
@@ -50,7 +52,7 @@ class RegistroFragment : Fragment() {
                 Toast.makeText(requireContext(), "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show()
             } else {
                 // Guardar el usuario en la base de datos
-                lifecycleScope.launch {
+                lifecycleScope.launch(Dispatchers.IO) {
                     val nuevoUsuario = Usuario(
                         nombre = nombre,
                         correo = correo,
@@ -58,10 +60,10 @@ class RegistroFragment : Fragment() {
                         isAdmin = false // Por defecto, los nuevos usuarios no son administradores
                     )
                     usuarioDAO.insertarUsuario(nuevoUsuario)
-                    requireActivity().runOnUiThread {
+                    withContext(Dispatchers.Main) {
                         Toast.makeText(requireContext(), "Usuario registrado correctamente", Toast.LENGTH_SHORT).show()
-                        // Navegar al LoginFragment después del registro exitoso
-                        findNavController().navigate(R.id.action_registroFragment_to_loginFragment)
+                        // Navegar a UsuarioPanelFragment usando la acción definida
+                        findNavController().navigate(R.id.action_registroFragment_to_usuarioPanelFragment)
                     }
                 }
             }

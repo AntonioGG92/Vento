@@ -7,7 +7,7 @@ import com.example.vento.data.entities.Producto
 interface ProductoDAO {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertarProducto(producto: Producto)
+    suspend fun insertarProducto(producto: Producto): Long  // Devuelve el ID insertado ✅
 
     @Query("SELECT * FROM productos WHERE categoriaId = :categoriaId")
     suspend fun obtenerProductosPorCategoria(categoriaId: Int): List<Producto>
@@ -21,6 +21,6 @@ interface ProductoDAO {
     @Delete
     suspend fun eliminarProducto(producto: Producto)
 
-    @Query("SELECT * FROM productos WHERE nombre = :nombre")
+    @Query("SELECT * FROM productos WHERE nombre = :nombre LIMIT 1")
     suspend fun obtenerProductoPorNombre(nombre: String): Producto?
 }

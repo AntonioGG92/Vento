@@ -10,9 +10,14 @@
         android:name="com.example.vento.registro.RegistroFragment"
         android:label="Registro"
         tools:layout="@layout/fragment_registro">
+
         <action
             android:id="@+id/action_registroFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
+
+        <action
+            android:id="@+id/action_registroFragment_to_usuarioPanelFragment"
+            app:destination="@id/usuarioPanelFragment" />
     </fragment>
 
     <!-- Login Fragment -->
@@ -21,12 +26,15 @@
         android:name="com.example.vento.login.LoginFragment"
         android:label="Login"
         tools:layout="@layout/fragment_login">
+
         <action
             android:id="@+id/action_loginFragment_to_adminFragment"
             app:destination="@id/adminFragment" />
+
         <action
             android:id="@+id/action_loginFragment_to_registroFragment"
             app:destination="@id/registroFragment" />
+
         <action
             android:id="@+id/action_loginFragment_to_usuarioPanelFragment"
             app:destination="@id/usuarioPanelFragment" />
@@ -38,9 +46,11 @@
         android:name="com.example.vento.admin.AdminFragment"
         android:label="Admin"
         tools:layout="@layout/fragment_admin">
+
         <action
             android:id="@+id/action_adminFragment_to_gestionProductosFragment"
             app:destination="@id/gestionarProductosFragment" />
+
         <action
             android:id="@+id/action_adminFragment_to_gestionCategoriasFragment"
             app:destination="@id/gestionarCategoriasFragment" />
@@ -52,6 +62,10 @@
         android:name="com.example.vento.usuario.UsuarioPanelFragment"
         android:label="Usuario Panel"
         tools:layout="@layout/fragment_usuario_panel">
+
+        <action
+            android:id="@+id/action_usuarioPanelFragment_to_productosDeCategoriaFragment"
+            app:destination="@id/productosDeCategoriaFragment" />
     </fragment>
 
     <!-- Fragmento para gestionar categorías -->
@@ -60,6 +74,7 @@
         android:name="com.example.vento.admin.GestionarCategoriasFragment"
         android:label="Gestionar Categorías"
         tools:layout="@layout/fragment_gestion_categorias">
+
         <action
             android:id="@+id/action_gestionarCategoriasFragment_to_adminFragment"
             app:destination="@id/adminFragment" />
@@ -71,8 +86,24 @@
         android:name="com.example.vento.admin.GestionarProductosFragment"
         android:label="Gestionar Productos"
         tools:layout="@layout/fragment_gestion_productos">
+
         <action
             android:id="@+id/action_gestionarProductosFragment_to_adminFragment"
             app:destination="@id/adminFragment" />
     </fragment>
+
+    <!-- Productos de Categoria Fragment -->
+    <fragment
+        android:id="@+id/productosDeCategoriaFragment"
+        android:name="com.example.vento.productos.ProductosDeCategoriaFragment"
+        android:label="Productos De Categoria"
+        tools:layout="@layout/fragment_productos_de_categoria">
+
+        <!-- Se mantiene la definición del argumento para ser utilizado con Bundle -->
+        <argument
+            android:name="categoriaId"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+
 </navigation>

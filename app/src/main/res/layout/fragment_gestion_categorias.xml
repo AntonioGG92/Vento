@@ -1,72 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@color/fondoTurquesa">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
 
-        <!-- Campo para el nombre de la categoría -->
+        <!-- Título -->
+        <TextView
+            android:id="@+id/tvTituloGestionCategorias"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gestión de Categorías"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="20dp" />
+
+        <!-- EditText para Nombre de la Categoría -->
         <EditText
             android:id="@+id/etNombreCategoria"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:hint="@string/hint_nombre_categoria"
+            android:layout_height="50dp"
+            android:hint="Nombre de la categoría"
             android:inputType="text"
+            android:background="@drawable/edittext_background"
             android:padding="12dp"
-            android:minHeight="48dp"
-            android:layout_marginBottom="8dp" />
+            android:layout_marginBottom="12dp" />
 
-        <!-- Campo para la descripción de la categoría -->
+        <!-- EditText para Descripción de la Categoría -->
         <EditText
             android:id="@+id/etDescripcionCategoria"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:hint="@string/hint_descripcion_categoria"
-            android:inputType="textMultiLine"
+            android:layout_height="50dp"
+            android:hint="Descripción de la categoría"
+            android:inputType="text"
+            android:background="@drawable/edittext_background"
             android:padding="12dp"
-            android:minHeight="48dp"
-            android:gravity="top"
-            android:layout_marginBottom="16dp" />
+            android:layout_marginBottom="12dp" />
 
-        <!-- Botón para agregar categoría -->
+        <!-- Botón para Agregar Categoría -->
         <Button
             android:id="@+id/btnAgregarCategoria"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/btn_agregar_categoria"
-            android:backgroundTint="@color/colorPrimaryDark"
+            android:layout_height="50dp"
+            android:text="Agregar Categoría"
+            android:backgroundTint="@color/colorPrimary"
             android:textColor="@android:color/white"
             android:layout_marginBottom="16dp" />
 
-        <!-- Botón para eliminar categoría -->
+        <!-- EditText para ingresar el nombre de la categoría a eliminar -->
+        <EditText
+            android:id="@+id/etNombreCategoriaEliminar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Nombre de la categoría a eliminar"
+            android:inputType="text"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Botón para Eliminar Categoría -->
         <Button
             android:id="@+id/btnEliminarCategoria"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/btn_eliminar_categoria"
+            android:layout_height="50dp"
+            android:text="Eliminar Categoría"
             android:backgroundTint="@color/colorPrimaryDark"
             android:textColor="@android:color/white"
             android:layout_marginBottom="16dp" />
 
-        <!-- Botón para volver -->
-        <Button
-            android:id="@+id/btnVolver"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/btn_volver"
-            android:backgroundTint="@color/colorPrimaryDark"
-            android:textColor="@android:color/white"
-            android:layout_marginBottom="16dp" />
-
-        <!-- RecyclerView para mostrar categorías -->
+        <!-- RecyclerView para Mostrar Categorías -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerCategorias"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:minHeight="200dp"
+            android:layout_marginBottom="20dp" />
 
+        <!-- Botón para Volver -->
+        <Button
+            android:id="@+id/btnVolver"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Volver"
+            android:backgroundTint="@color/colorSecondary"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="10dp" />
     </LinearLayout>
 </ScrollView>

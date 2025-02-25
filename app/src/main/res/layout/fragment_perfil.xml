@@ -1,60 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
     android:padding="16dp"
-    android:background="@color/backgroundColor">
+    android:background="@color/fondoTurquesa">
 
-    <!-- Imagen de Perfil -->
-    <ImageView
-        android:id="@+id/imagePerfil"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:src="@drawable/ic_person"
-        android:background="@drawable/circle_background"
-        android:scaleType="centerCrop"
-        android:layout_marginBottom="16dp" />
-
-    <!-- Información del Usuario -->
     <TextView
-        android:id="@+id/textNombreUsuario"
-        android:layout_width="wrap_content"
+        android:id="@+id/tvTituloPerfil"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Francisco Rodríguez"
-        android:textSize="18sp"
+        android:text="Perfil de Usuario"
+        android:textSize="24sp"
         android:textStyle="bold"
-        android:layout_marginBottom="4dp"
-        android:textColor="@color/textColor" />
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="20dp"/>
 
     <TextView
-        android:id="@+id/textTelefonoUsuario"
-        android:layout_width="wrap_content"
+        android:id="@+id/tvNombreUsuario"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tlf: 678874596"
-        android:textSize="16sp"
-        android:layout_marginBottom="4dp"
-        android:textColor="@color/textColor" />
+        android:text="Nombre: Usuario"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="12dp"/>
 
     <TextView
-        android:id="@+id/textDireccionUsuario"
-        android:layout_width="wrap_content"
+        android:id="@+id/tvCorreoUsuario"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Calle de la Paz 49"
-        android:textSize="16sp"
-        android:layout_marginBottom="16dp"
-        android:textColor="@color/textColor" />
+        android:text="Correo: usuario@email.com"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="12dp"/>
 
-    <!-- Botón de Desconexión -->
     <Button
-        android:id="@+id/buttonDesconectarse"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Desconectarse"
-        android:backgroundTint="@color/colorPrimary"
-        android:textColor="@color/buttonTextColor"
-        android:padding="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp" />
+        android:id="@+id/btnCerrarSesion"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Cerrar Sesión"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="12dp"/>
 </LinearLayout>

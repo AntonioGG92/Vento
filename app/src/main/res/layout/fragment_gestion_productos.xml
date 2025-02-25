@@ -1,93 +1,120 @@
-<LinearLayout
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@color/fondoTurquesa">
 
-    <!-- Título -->
-    <TextView
-        android:id="@+id/tvTituloGestionProductos"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/titulo_gestion_productos"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:layout_marginBottom="16dp" />
+        android:orientation="vertical">
 
-    <!-- EditText para Nombre del Producto -->
-    <EditText
-        android:id="@+id/etNombreProducto"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:hint="@string/hint_nombre_producto"
-        android:inputType="text"
-        android:autofillHints="username" />
+        <!-- Título -->
+        <TextView
+            android:id="@+id/tvTituloGestionProductos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo_gestion_productos"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="20dp" />
 
-    <!-- EditText para Precio del Producto -->
-    <EditText
-        android:id="@+id/etPrecioProducto"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:hint="@string/hint_precio_producto"
-        android:inputType="numberDecimal"
-        android:autofillHints="postalCode" />
+        <!-- EditText para Nombre de la Categoría del Producto (Ahora está arriba) -->
+        <EditText
+            android:id="@+id/etNombreCategoriaProducto"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Nombre de la categoría"
+            android:inputType="text"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp" />
 
-    <!-- EditText para Descripción del Producto -->
-    <EditText
-        android:id="@+id/etDescripcionProducto"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:hint="@string/hint_descripcion_producto"
-        android:inputType="textMultiLine"
-        android:lines="3"
-        android:gravity="top"
-        android:autofillHints="none" />
+        <!-- EditText para Nombre del Producto -->
+        <EditText
+            android:id="@+id/etNombreProducto"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/hint_nombre_producto"
+            android:inputType="text"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp" />
 
-    <!-- EditText para Nombre del Producto a Eliminar -->
-    <EditText
-        android:id="@+id/etNombreProductoEliminar"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:hint="Nombre del producto a eliminar"
-        android:inputType="text"
-        android:layout_marginTop="8dp" />
+        <!-- EditText para Precio del Producto -->
+        <EditText
+            android:id="@+id/etPrecioProducto"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/hint_precio_producto"
+            android:inputType="numberDecimal"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp" />
 
-    <!-- Botón para Agregar Producto -->
-    <Button
-        android:id="@+id/btnAgregarProducto"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:text="@string/btn_agregar_producto"
-        android:backgroundTint="@color/colorPrimary"
-        android:textColor="@android:color/white"
-        android:layout_marginTop="8dp" />
+        <!-- EditText para Descripción del Producto -->
+        <EditText
+            android:id="@+id/etDescripcionProducto"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:hint="@string/hint_descripcion_producto"
+            android:inputType="textMultiLine"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:gravity="top"
+            android:layout_marginBottom="12dp" />
 
-    <!-- Botón para Eliminar Producto -->
-    <Button
-        android:id="@+id/btnEliminarProducto"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:text="@string/btn_eliminar_producto"
-        android:backgroundTint="@color/colorPrimaryDark"
-        android:textColor="@android:color/white"
-        android:layout_marginTop="8dp" />
+        <!-- EditText para Nombre del Producto a Eliminar -->
+        <EditText
+            android:id="@+id/etNombreProductoEliminar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Nombre del producto a eliminar"
+            android:inputType="text"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp" />
 
-    <!-- Botón para Volver -->
-    <Button
-        android:id="@+id/btnVolver"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:text="@string/btn_volver"
-        android:backgroundTint="@color/colorSecondary"
-        android:textColor="@android:color/white"
-        android:layout_marginTop="16dp" />
+        <!-- Botón para Agregar Producto -->
+        <Button
+            android:id="@+id/btnAgregarProducto"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/btn_agregar_producto"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="12dp" />
 
-    <!-- RecyclerView para Mostrar Productos -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerProductos"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="200dp" />
-</LinearLayout>
+        <!-- Botón para Eliminar Producto -->
+        <Button
+            android:id="@+id/btnEliminarProducto"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/btn_eliminar_producto"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Botón para Volver -->
+        <Button
+            android:id="@+id/btnVolver"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/btn_volver"
+            android:backgroundTint="@color/colorSecondary"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="16dp" />
+
+        <!-- RecyclerView para Mostrar Productos -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerProductos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="200dp" />
+
+    </LinearLayout>
+</ScrollView>
